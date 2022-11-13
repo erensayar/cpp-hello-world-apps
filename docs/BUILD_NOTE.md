@@ -19,7 +19,7 @@ Burdan sonra eğer sisteme eklemek istersek MAKE kullanacağız. Örneğin OpenC
 
 3. build dizininde şu koutlar sırayla girilir. 
 
-       make -j4
+       make -j4 (4 : işlemci çekirdek sayısı)
 
        sudo make install
 
