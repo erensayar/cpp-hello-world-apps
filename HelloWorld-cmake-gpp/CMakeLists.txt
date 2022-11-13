@@ -8,9 +8,11 @@ else()
   set(CMAKE_CXX_EXTENSIONS OFF)
 endif()
 
-set(COMPILER_PATH C:/MinGW/bin)
-SET(CMAKE_C_COMPILER ${COMPILER_PATH}/gcc.exe)
-SET(CMAKE_CXX_COMPILER ${COMPILER_PATH}/g++.exe)
+if(WIN32)
+  SET(COMPILER_PATH C:/MinGW/bin)
+  SET(CMAKE_C_COMPILER ${COMPILER_PATH}/gcc.exe)
+  SET(CMAKE_CXX_COMPILER ${COMPILER_PATH}/g++.exe)
+endif(WIN32)
 
 project(HelloWorld)
 
