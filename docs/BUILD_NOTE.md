@@ -6,7 +6,7 @@
 	
     veya 
 
-       make .. -G "MinGW Makefiles"
+       cmake .. -G "MinGW Makefiles"
 
 2. gene aynı dizinde şu komut girilir:
 
