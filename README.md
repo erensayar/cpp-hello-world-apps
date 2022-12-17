@@ -9,57 +9,86 @@ This repo include C++ project that projects include C++ development environment 
 
 # <center> MY PERSONAL NOTES
 
-<br><br><br>
+<br>
+<br>
+
+# BUILD NOTES
+
+<br>
+<br>
+<br>
+
+# CMAKE With Ninja
+
+    mkdir build && cd build
+
+    cmake .. -G "Ninja"
+
+    ninja
+       
+---
+
+<br>
+<br>
+<br>
 
 # CMAKE
 
-1. build dosyası oluşturulur, bu dizin içindeyken şu komut girilir:
-       
-       cmake ..     
+
+1. Create build file and enter in directory then enter this command.
+
+* 1.A. Option1: Build With MAKE
+      
+      cmake ..     
 	
-    veya 
+* 1.B. Option2: Build With MinGW
 
-       cmake .. -G "MinGW Makefiles"
+      cmake .. -G "MinGW Makefiles"
 
-2. gene aynı dizinde şu komut girilir:
+    
+
+
+2. Then enter this command
 
        cmake --build .
 
 
-Artık çalıştırılabilir bir çıktı elde edilmiştir.
+Now we have executable output.
 
-Burdan sonra eğer sisteme eklemek istersek MAKE kullanacağız. Örneğin OpenCV kütüphanesini Linux sistemimize eklemek istediğimizde bu adıma kadar gelip ardından make ile sisteme eklememiz gerekir.
+## Install Output To System
+If outputs wants install to system we can use MAKE. (Example: We have downloaded the OpenCV source code. Then compile and built the source code. If want to add system the use make.)  
 
-3. build dizininde şu koutlar sırayla girilir. 
+Enter these commands in order
 
-       make -j4 (4 : işlemci çekirdek sayısı)
+    make -j4 (4 : processor core number)
 
-       sudo make install
+    sudo make install
 
 
 ---
 
 <br>
 <br>
+<br>
 
 # GPP
 
-### 1. Kullanım 1 : Derleme Ve Çalıştırma
+## Usage 1 : Compiling and Running
 
-   Derleme: 
+   Compiling: 
  	
        g++ main.cpp
         
  
-   Çalıştırma:
+   Running:
         
        ./a.out
 
-### 2. Kullanım 2 : Derleme Ve Çalıştırma - Çıktı Tipini Belirleme
+## Usage 2 : Compiling and Running And Specified Output Type
 
        g++ -o main.sh main.cpp
 
-   veya
+   or
 
        g++ -o main.exe main.cpp
 
