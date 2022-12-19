@@ -9,7 +9,7 @@ else()
 endif()
 
 if(WIN32)
-  SET(COMPILER_PATH C:/MinGW/bin)
+  SET(COMPILER_PATH C:/mingw64/bin)
   SET(CMAKE_C_COMPILER ${COMPILER_PATH}/gcc.exe)
   SET(CMAKE_CXX_COMPILER ${COMPILER_PATH}/g++.exe)
 endif(WIN32)
