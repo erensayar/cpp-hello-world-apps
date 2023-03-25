@@ -4,6 +4,8 @@
 
 This repo include C++ projects, that projects include C++ development tools like CMAKE, CPM, Conan.io, maybe Ninja someday... I'm trying cross compiling.
 
+---
+
 ## Notes
 * <b>Cmake</b>: Build generator, otomation tool. Cmake need a build tool.
 * <b>Ninja</b>: Build tool.
@@ -14,7 +16,7 @@ This repo include C++ projects, that projects include C++ development tools like
 <br>
 
 
-# 1. NOTE: CMAKE Usage
+# 1. CMAKE Notes
 
 ## 1.1. Ninja
 
@@ -49,7 +51,7 @@ Enter these commands in order
     sudo make install
 
 
-# 2. NOTE: Compiler Notes
+# 2. Compiler Notes
 
 ## GPP
 
@@ -73,7 +75,7 @@ Enter these commands in order
        g++ -o main.exe main.cpp
 
 
-# 3. NOTE: IDE Configurations
+# 3. IDE Configurations Notes
 
 ## VS Code
 
@@ -113,7 +115,30 @@ If libraries has warning underline, IDE can't see library than you can change in
 
         <workspace_dir>/.vscode/c_cpp_properties.json
 
+# 4. Notes C/C++
 
-# 4. Sources
+## Segmentation Fault Causative Conditions
+ 
+### Condition 1 
+    
+    int *p = NULL;
+    *p = 1;
+    
+### Condition 2
+
+    char *str = "Foo"; // Compiler marks the constant string as read-only
+    *str = 'b'; // Which means this is illegal and results in a segfault
+
+Dangling pointer points to a thing that does not exist anymore, like here:
+
+    char *p = NULL;
+    {
+        char c;
+        p = &c;
+    }
+    // Now p is dangling
+
+# 5. Sources
 * /docs/C++ Syntax.md -> https://github.com/gibsjose/cpp-cheat-sheet
 * /docs/CPM pdf -> https://medium.com/swlh/cpm-an-awesome-dependency-manager-for-c-with-cmake-3c53f4376766
+* https://stackoverflow.com/questions/2346806/what-is-a-segmentation-fault
